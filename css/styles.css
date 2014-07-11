@@ -1,11 +1,11 @@
-@font-face { 
-    font-family: Elegant; 
-    src: url('fonts/ElegantLight.ttf')format("truetype"); 
-} 
-@font-face { 
-    font-family: 'Stymie'; 
-    src: url('StymieStylus.otf'); 
-} 
+@font-face {
+    font-family: Elegant;
+    src: url('fonts/ElegantLight.ttf')format("truetype");
+}
+@font-face {
+    font-family: 'Stymie';
+    src: url('StymieStylus.otf');
+}
 
 
 /* Misc
@@ -22,15 +22,16 @@ body {
 }
 
 .content {
-    background-color:white; 
+    background-color:white;
     padding-top:1em;
-    padding-bottom: 1em; 
-    position:relative; 
+    padding-bottom: 1em;
+    position:relative;
     z-index:90
 }
 
 .content img {
     margin-bottom:20px;
+    width: 10em;
 }
 .centered {
     text-align:center;
@@ -40,16 +41,16 @@ body {
 }
 
 .header{
-    position:relative;    
+    position:relative;
 }
 
 /* NAV
 ******************************************************************/
 
 .nav-container {
-    background-color:#1b1b1b; 
-    height:70px; 
-    position: relative; 
+    background-color:#1b1b1b;
+    height:70px;
+    position: relative;
     z-index: 200;
 }
 
@@ -59,7 +60,7 @@ nav {
 	background-color:#1b1b1b;
 	position: relative;
     float:left;
-    height:70px;    	
+    height:70px;
 }
 
 nav ul {
@@ -80,7 +81,7 @@ nav ul {
 nav li {
     text-transform:uppercase;
 	display: inline;
-	list-style: none;    
+	list-style: none;
 }
 
 nav li a {margin-top:20px;
@@ -90,7 +91,7 @@ nav li a {margin-top:20px;
 	font-weight: 400;
 	display: inline-block;
 	margin-right:20px;
-    text-align: center;	
+    text-align: center;
 }
 
 nav li a:hover,
@@ -110,8 +111,8 @@ nav li a.selected {
 
 
 #home {
-    background: url(../img2/beachBoat.jpg) no-repeat center center;
-    background-color:#e24e4e;
+    /*background: url(../img2/beachBoat.jpg) no-repeat center center;*/
+    background-color:#0099e5;
     width:100%;
     position:relative;
     display:block;
@@ -119,10 +120,12 @@ nav li a.selected {
     z-index:20;
 }
 
-#home_bg { background: url(../img2/beachBoat.jpg) no-repeat center center;
-    background-color:#0099e5;
-    width:100%;
-    height:100%;
+#home_bg {
+    /*background: url(../img2/beachBoat.jpg) no-repeat center center;
+    background-color:#0099e5; */
+    width:50%;
+    height:80%;
+    margin: 7.9% auto 10% 20.4%;
     position:absolute;
     z-index:2;
     top:0px;
@@ -141,24 +144,95 @@ nav li a.selected {
     line-height: 115px;
     color: #fff;
 
-    margin-top:10px;
+    margin: 1em auto 1em auto;
     z-index: 3;
     position:relative;
+}
+/*
+#carousel {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  #carousel ul {
+    width:  100%;
+    padding:0;
+    margin:0;
+  }
+
+  #carousel ul li {
+    width:100%;
+    text-align:   center;
+    height: 100%;
+    list-style:   none;
+    float:  left;
+  } */
+
+  #carousel_inner {
+float:left; /* important for inline positioning */
+width:98.2%; /* important (this width = width of list item(including margin) * items shown */
+overflow: hidden;  /* important (hide the items outside the div) */
+/* non-important styling bellow */
+background: #F0F0F0;
+height: 50em;
+z-index:0;
+}
+
+#carousel_ul {
+position:relative;
+/*left:-210px; /* important (this should be negative number of list items width(including margin) */
+list-style-type: none; /* removing the default styling for unordered list items */
+margin-right: 2%;
+margin-left: 2%;
+padding: 0px;
+width:9999px; /* important */
+/* non-important styling bellow */
+padding-bottom:10px;
+}
+
+#carousel_ul li{
+float: left; /* important for inline positioning of the list items */
+  /* fixed width, important */
+/* just styling bellow*/
+padding:0px;
+height:60em;
+background: #000000;
+}
+
+#carousel_ul li img {
+.margin-bottom:-4px; /* IE is making a 4px gap bellow an image inside of an anchor (<a href...>) so this is to fix that*/
+/* styling */
+cursor:pointer;
+
+border:0px;
+}
+#left_scroll, #right_scroll{
+float:left;
+width:15px;
+background: #C0C0C0;
+z-index: 10;
+}
+#left_scroll img, #right_scroll img{
+/*styling*/
+cursor: pointer;
+height: 35em;
 }
 
 #arrow {
     width:79px;
     height:78px;
 	background: url(../img/next_arrow.png) no-repeat center -79px;
-    position:absolute;
+    margin: 20% auto 0 auto;
     bottom:10px;
     z-index:200;
 }
 
 #arrow a {
     position:absolute;
-    left:0px;    
-    z-index:200;	
+    left:0px;
+    z-index:200;
     width:79px;
     height:78px;
     background: url(../img/next_arrow.png) no-repeat center top;
@@ -177,21 +251,19 @@ nav li a.selected {
 
 #head {
     /*background: url(../img/head.png) no-repeat 50% bottom  ;*/
-   
-    height:100%;
     width:900px;
     max-width:900px;
     /*position:absolute; */
     display:block;
     z-index: 100;
     bottom:0px;
-    -moz-background-size:contain; 
-    -webkit-background-size:contain; 
+    -moz-background-size:contain;
+    -webkit-background-size:contain;
     background-size:contain;
     margin: 5em auto 5em auto;
 }
-    
-}      
+
+}
 
 img#logo {
     position:absolute;
@@ -205,7 +277,7 @@ img#logo {
 
 #parallax {
     background: url(../img2/justPlane.png) no-repeat center top  ;
-    
+
     width:100%;
     height:100%;
     position:absolute;
@@ -214,8 +286,8 @@ img#logo {
 }
 
 #parallax_2 {
-    background: url(../img2/planeBG.png) no-repeat center top  ;
-    
+    /*background: url(../img2/justPlane.png) no-repeat center top  ;  */
+
     width:100%;
     height:100%;
     position:absolute;
@@ -234,12 +306,12 @@ img#logo {
 }
 
 #parallax_4 {
-    background: url(../img2/couple.png) no-repeat center top;      
+    background: url(../img2/couple.png) no-repeat center top;
     display:block;
     width:100%;
     height:100%;
     position:absolute;
-    z-index: 4; 
+    z-index: 4;
 }
 
 #parallax_5 {
@@ -252,7 +324,7 @@ img#logo {
 }
 
 #parallax_6 {
-    background: url(../img/works_bg3.png) no-repeat center top  ;    
+    background: url(../img/works_bg3.png) no-repeat center top  ;
     width:100%;
     height:600px;
     position:absolute;
@@ -263,21 +335,21 @@ img#logo {
 
 
 
-/* Parallax mobile 
+/* Parallax mobile
 ******************************************************************/
 
 
 #parallax_mobile {
-    background: url(../img/about_bg2.png) no-repeat center top  ;    
+    background: url(../img2/justPlane.png) no-repeat center top  ;
     width:100%;
-    height:450px;
+    height:100%;
     position:absolute;
     display:block;
     z-index: 10;
 }
 
 #parallax_2_mobile {
-    background: url(../img/about_bg3.png) no-repeat center top  ;    
+    background: url(../img2/planeBG.jpg) no-repeat center top  ;
     width:100%;
     height:450px;
     position:absolute;
@@ -286,27 +358,28 @@ img#logo {
 }
 
 #parallax_3_mobile {
-    background: url(../img/services_bg2.png) no-repeat center bottom  ;    
+    background: url(../img2/couple.png) no-repeat center bottom  ;
     width:100%;
-    height:450px;
-    position:absolute;
-    display:block;
-    z-index: 1;
-}
-
-#parallax_4_mobile {
-    background: url(../img/services_bg3.png) no-repeat center bottom  ;
-    
-    width:100%;
-    height:450px;
+    height:100%;
+    margin-top: 10em;
     position:absolute;
     display:block;
     z-index: 10;
 }
 
+#parallax_4_mobile {
+    background: url(../img2/tvBG.jpg) no-repeat center bottom  ;
+
+    width:100%;
+    height:55em;
+    position:absolute;
+    display:block;
+    z-index: 5;
+}
+
 #parallax_5_mobile {
     background: url(../img/works_bg2.png) no-repeat center bottom  ;
-    
+
     width:100%;
     height:450px;
     position:absolute;
@@ -331,22 +404,23 @@ img#logo {
 
 #about_header {
     background: url(../img2/planeBG.png) no-repeat center center  ;
-    background-color:#075977; 
+    background-color:#fff;
     width:100%;
     height:40em;
     position:relative;
     display:block;
-    text-align: center;  
+    text-align: center;
+    z-index: 5;
 }
 
 #about_header_mobile {
     background: url(../img2/planeBG.png) no-repeat center center  ;
-    background-color:#e24e4e; 
+    background-color:#e24e4e;
     width:100%;
-    height:450px;
+    height:55em;
     position:relative;
     display:block;
-    text-align: center;  
+    text-align: center;
 }
 
 
@@ -366,22 +440,22 @@ img#logo {
 
 #services_header {
    /* background: url(../img/services_bg.jpg) no-repeat center center  ;*/
-    background-color:#fff; 
+    background-color:#fff;
     width:100%;
     height: 40em;
     position:relative;
     display:block;
-    text-align: center;  
-     
+    text-align: center;
+
 }
 #services_header_mobile {
-    background: url(../img/services_bg.jpg) no-repeat center center  ;
-    background-color:#e24e4e; 
+    background: url(../img/tvBG.jpg) no-repeat center center  ;
+    background-color:#fff;
     width:100%;
-    height:450px;
+    height:55em;
     position:relative;
     display:block;
-    text-align: center;    
+    text-align: center;
 }
 
 
@@ -416,7 +490,7 @@ div.span12{
 
 #works_header {
     background: url(../img/works_bg.jpg) no-repeat center center  ;
-    background-color:#961E3C; 
+    background-color:#961E3C;
     width:100%;
     height:450px;
     position:relative;
@@ -425,7 +499,7 @@ div.span12{
 }
 #works_header_mobile {
     background: url(../img/works_bg.jpg) no-repeat center center  ;
-    background-color:#e24e4e; 
+    background-color:#e24e4e;
     width:100%;
     height:450px;
     position:relative;
@@ -446,8 +520,8 @@ div.span12{
 
 }
 .client h5 {
-    text-transform:uppercase; 
-    margin-top:2px; 
+    text-transform:uppercase;
+    margin-top:2px;
     margin-bottom:20px;
 }
 
@@ -461,7 +535,7 @@ div.span12{
     width:100%;
     position:relative;
     display:block;
-    text-align: center;    
+    text-align: center;
 }
 
 #gallery_bg {
@@ -472,7 +546,7 @@ div.span12{
     position:absolute;
     z-index:2;
     top:0px;
-    left:0px;    
+    left:0px;
 }
 
 #gallery h1 {
@@ -539,18 +613,18 @@ figure a {
 
 figure a:hover {
 	text-decoration: none;
-    
+
 }
 
 figure a:hover img {
-	opacity: 0.4; 
+	opacity: 0.4;
 	filter: alpha(opacity=40); /* IE6-IE8 */
         -webkit-transition: opacity .3s ease-in-out;
 		-moz-transition: opacity .3s ease-in-out;
 		-o-transition: opacity .3s ease-in-out;
-		-ms-transition: opacity .3s ease-in-out;	
+		-ms-transition: opacity .3s ease-in-out;
 		transition: opacity .3s ease-in-out;
-    
+
 }
 
 figure a:before {
@@ -561,15 +635,15 @@ figure a:before {
 	height: 1em;
 	width: 1em;
 	text-align: center;
-	
+
 	color: red;
 	font-weight: bold;
-	
+
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	z-index: 100;
-	
+
 	margin: -0.5em 0 0 -0.5em;
 }
 
@@ -593,12 +667,12 @@ button.cta {
 	background:#e24e4e;
     text-shadow:
     0px 1px 0px rgba(120,36,50,1),
-    0px 1px 0px rgba(255,255,255,0); 
+    0px 1px 0px rgba(255,255,255,0);
     border: 0px;
 }
 
 button.cta:hover {
-	background:#ff5555;	
+	background:#ff5555;
 }
 
 button.cta:active {
@@ -620,7 +694,7 @@ button.cta:active {
     height: 55em;
 }
 
-#start_project h2 {    
+#start_project h2 {
     color:white;
     margin-top: 5em;
     margin-bottom:2em;
@@ -637,36 +711,44 @@ button.cta:active {
     color:#e4f1f7;
 }
 
-#start_project p { 
+#start_project p {
     color:white;
 }
 
 #map {
-    height:400px; 
-    width:100%; 
+    height:400px;
+    width:100%;
     position: relative;
 }
 
-input.textbox { 
+input.textbox {
     background-color: rgba( 255, 255, 255, 0.2);
-    border: 1px solid #aaa; 
-    outline:0; 
-    height:2em; 
-    width: 20em; 
+    border: 1px solid #aaa;
+    outline:0;
+    height:2em;
+    width: 20em;
     border-radius: 0.5em;
-  } 
+    color: #fff;
+  }
+
+.enterButton{
+   background-color: rgba( 255, 255, 255, 0.2);
+   border-radius: 0.3em;
+   border: 1px solid #aaa;
+   color: #fff;
+}
 
 
 /* Social icons
 ******************************************************************/
- 
+
 .list-social li {
-    padding:0 10px 10px 0; 
-    list-style: none; 
-    margin:0px; 
-    text-align: center; 
-    display: inline-block; 
-    margin-top:50px; 
+    padding:0 10px 10px 0;
+    list-style: none;
+    margin:0px;
+    text-align: center;
+    display: inline-block;
+    margin-top:50px;
     margin-bottom:50px;
 }
 
@@ -675,8 +757,8 @@ input.textbox {
     height:56px;
     width:56px;
     display:block;
-    float:left; 
-    background-position:0 0;    
+    float:left;
+    background-position:0 0;
 }
 
 .list-social li.twitter a {
@@ -684,7 +766,7 @@ input.textbox {
     height:56px;
     width:56px;
     display:block;
-    float:left; 
+    float:left;
     background-position:0 0;
 }
 
@@ -693,7 +775,7 @@ input.textbox {
     height:56px;
     width:56px;
     display:block;
-    float:left; 
+    float:left;
     background-position:0 0;
 }
 
@@ -702,7 +784,7 @@ input.textbox {
     height:56px;
     width:56px;
     display:block;
-    float:left; 
+    float:left;
     background-position:0 0;
 }
 
@@ -711,7 +793,7 @@ input.textbox {
     height:56px;
     width:56px;
     display:block;
-    float:left; 
+    float:left;
     background-position:0 0;
 }
 

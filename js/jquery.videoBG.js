@@ -10,8 +10,8 @@
 
 (function( $ ){
 
-	$.fn.videoBG = function( selector, options ) { 
-		
+	$.fn.videoBG = function( selector, options ) {
+
 		var options = {};
 		if (typeof selector == "object") {
 			options = $.extend({}, $.fn.videoBG.defaults, selector);
@@ -20,71 +20,71 @@
 			options = $.fn.videoBG.defaults;
 		}
 		else {
-			return $(selector).videoBG(options);		
+			return $(selector).videoBG(options);
 		}
-		
+
 		var container = $(this);
-		
+
 		// check if elements available otherwise it will cause issues
 		if (!container.length)
 			return;
-		
+
 		// container to be at least relative
 		if (container.css('position') == 'static' || !container.css('position'))
 			container.css('position','relative');
-		
+
 		// we need a width
 		if (options.width == 0)
-			options.width = container.width();
-		
+			options.width = 1.23*container.width();
+
 		// we need a height
 		if (options.height == 0)
-			options.height = container.height();	
-		
+			options.height = 1.23*container.height();
+
 		// get the wrapper
 		var wrap = $.fn.videoBG.wrapper();
 		wrap.height(options.height)
 			.width(options.width);
-		
+
 		// if is a text replacement
 		if (options.textReplacement) {
-		
+
 			// force sizes
 			options.scale = true;
-			
+
 			// set sizes and forcing text out
 			container.width(options.width)
 				.height(options.height)
 				.css('text-indent','-9999px');
 		}
 		else {
-		
+
 			// set the wrapper above the video
 			wrap.css('z-index',options.zIndex+1);
 		}
-		
+
 		// move the contents into the wrapper
 		wrap.html(container.html());
-		
+
 		// get the video
 		var video = $.fn.videoBG.video(options);
-		
+
 		// if we are forcing width / height
 		if (options.scale) {
-			
+
 			// overlay wrapper
 			wrap.height(options.height)
 				.width(options.width);
-			
+
 			// video
 			video.height(options.height)
 				.width(options.width);
 		}
-		
+
 		// add it all to the container
 		container.html(wrap);
 		container.append(video);
-		
+
 		return this;
 	}
 
@@ -95,7 +95,7 @@
 
 		$el.css('min-height',0).css('min-width',0);
 		$el.parent().width(windowWidth).height(windowHeight);
-		// if by width 
+		// if by width
 		if (windowWidth / windowHeight > $el.aspectRatio) {
 			$el.width(windowWidth).height('auto');
 			// shift the element up
@@ -104,13 +104,13 @@
 			if (shift < 0) shift = 0;
 			$el.css("top",-shift);
 		} else {
-			$el.width('auto').height(windowHeight);			
+			$el.width('auto').height(windowHeight);
 			// shift the element left
 			var width = $el.width();
 			var shift = (width - windowWidth) / 2;
 			if (shift < 0) shift = 0;
 			$el.css("left",-shift);
-			
+
 			// this is a hack mainly due to the iphone
 			if (shift === 0) {
 				var t = setTimeout(function() {
@@ -120,12 +120,12 @@
 		}
 
 		$('body > .videoBG_wrapper').width(windowWidth).height(windowHeight);
-			
+
 	}
 
 	// get the formatted video element
 	$.fn.videoBG.video = function(options) {
-		
+
 		$('html, body').scrollTop(-1);
 
 		// video container
@@ -139,7 +139,7 @@
 			.css('width',options.width)
 			.css('opacity',options.opacity)
 			.css('overflow','hidden');
-		
+
 		// video element
 		var $video = $('<video/>');
 		$video.css('position','absolute')
@@ -149,7 +149,7 @@
 			.css('left',-200)
 			.css('min-width','120%')
 			.css('min-height','100%');
-		
+
 		if (options.autoplay) {
 			$video.attr('autoplay',options.autoplay);
 		}
@@ -168,74 +168,74 @@
 				clearTimeout(resizeTimeout);
 				resizeTimeout = setTimeout(function() {
 					$.fn.videoBG.setFullscreen($video);
-				},100);	
+				},100);
 			});
 			$.fn.videoBG.setFullscreen($video);
 		}
-			
-		
+
+
 		// video standard element
 		var v = $video[0];
-		
+
 		// if meant to loop
 		if (options.loop) {
 			loops_left = options.loop;
-		
+
 			// cant use the loop attribute as firefox doesnt support it
 			$video.bind('ended', function(){
-				
+
 				// if we have some loops to throw
 				if (loops_left)
 					// replay that bad boy
 					v.play();
-				
+
 				// if not forever
 				if (loops_left !== true)
 					// one less loop
 					loops_left--;
   			});
 		}
-		
+
 		// when can play, play
 		$video.bind('canplay', function(){
-			
+
 			if (options.autoplay)
 				// replay that bad boy
 				v.play();
-				
+
 		});
-		
-		
+
+
 		// if supports video
 		if ($.fn.videoBG.supportsVideo()) {
 
 		  	// supports webm
 		  	if ($.fn.videoBG.supportType('webm')){
-		  		
+
 		  		// play webm
 		  		$video.attr('src',options.webm);
 		  	}
 		  	// supports mp4
-		  	else if ($.fn.videoBG.supportType('mp4')) {	  	
-		  		
+		  	else if ($.fn.videoBG.supportType('mp4')) {
+
 		  		// play mp4
 		  		$video.attr('src',options.mp4);
-		  		
+
 		  	//	$video.html('<source src="'.options.mp4.'" />');
-		  		
+
 		  	}
 		  	// throw ogv at it then
 		  	else {
-		  		
+
 		  		// play ogv
 		  		$video.attr('src',options.ogv);
 		  	}
-	  	
+
 	  	}
-	  	
-	  	
-		
-		// image for those that dont support the video	
+
+
+
+		// image for those that dont support the video
 		var $img = $('<img/>');
 		$img.attr('src',options.poster)
 			.css('position','absolute')
@@ -246,57 +246,57 @@
 			.css('min-width','100%')
 			.css('min-height','100%');
 
-            
-            
-		
+
+
+
 		// add the image to the video
 		// if suuports video
 		if ($.fn.videoBG.supportsVideo()) {
 			// add the video to the wrapper
 			$div.html($video);
 		}
-		
+
 		// nope - whoa old skool
 		else {
-			
+
 			// add the image instead
 			$div.html($img);
 		}
-		
+
 		// if text replacement
 		if (options.textReplacement) {
-	
+
 			// force the heights and widths
 			$div.css('min-height',1).css('min-width',1);
 			$video.css('min-height',1).css('min-width',1);
 			$img.css('min-height',1).css('min-width',1);
-			
+
 			$div.height(options.height).width(options.width);
 			$video.height(options.height).width(options.width);
-			$img.height(options.height).width(options.width);	
+			$img.height(options.height).width(options.width);
 		}
-		
+
 		if ($.fn.videoBG.supportsVideo()) {
 			v.play();
 		}
 		return $div;
 	}
-	
+
 	// check if suuports video
 	$.fn.videoBG.supportsVideo = function() {
 		return (document.createElement('video').canPlayType);
 	}
-	
+
 	// check which type is supported
 	$.fn.videoBG.supportType = function(str) {
-		
+
 		// if not at all supported
 		if (!$.fn.videoBG.supportsVideo())
 			return false;
-		
+
 		// create video
 		var v = document.createElement('video');
-		
+
 		// check which?
 		switch (str) {
 			case 'webm' :
@@ -307,12 +307,12 @@
 				break;
 			case 'ogv' :
 				return (v.canPlayType('video/ogg; codecs="theora, vorbis"'));
-				break;			
+				break;
 		}
 		// nope
-		return false;	
+		return false;
 	}
-	
+
 	// get the overlay wrapper
 	$.fn.videoBG.wrapper = function() {
 		var $wrap = $('<div/>');
@@ -322,7 +322,7 @@
 			.css('left',0);
 		return $wrap;
 	}
-	
+
 	// these are the defaults
 	$.fn.videoBG.defaults = {
 			mp4:'',

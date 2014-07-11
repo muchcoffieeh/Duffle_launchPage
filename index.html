@@ -1,92 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta charset="utf-8">
     <title>TVDuffle Coming Soon!</title>
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    
+
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <!--
     <link href="css/flexslider.css" rel="stylesheet">
     <link href="css/jquery.fancybox-1.3.4.css" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,300italic,400italic" rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'> 
+  -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:100' rel='stylesheet' type='text/css'>
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">                    
-    
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-                
-        
+
+
   </head>
 
-    
-    
+
+
   <body>
-      
-      
+
       <!-- HOME  -->
       <section id="home" >
-          
-          
-          <div class="container">
-              
-              <div class="row ">
+
+          <div class="containerTop">
+            <div id='carousel_container'>
+          <div id='left_scroll'><img src='icons/left.png' /></div>
+            <div id='carousel_inner'>
+              <ul id='carousel_ul'>
+                <li><a href='#'><img src='img2/beachBoat.jpg' /></a></li>
+                <li><a href='#'><img src='img2/greece.jpg' /></a></li>
+                <li><a href='#'><img src='img2/angkorWat.jpg' /></a></li>
+                <li><a href='#'><img src='img2/newZealand.jpg' /></a></li>
+              </ul>
+            </div>
+          <div id='right_scroll'><img src='icons/right.png' /></div>
+        </div>
+              <div class="rowTop">
                   <div>
                       <!--
                       <div id="logo" ><img style="height: 10em;" src="img2/logo_temp.png" alt="Logo" ></div>-->
-                      
+
                       <div id="head" class="hidden-phone"></div>
-                      
+
                       <h1>Travel.<br> Right from the TV.</br><br>Coming Soon.</br></h1>
-                      
-                  
-                      
-                      <div id="arrow" class="hidden-phone"><a href="#vision"></a></div>
+
+
+
+                     <!-- <div id="arrow" class="hidden-phone"><a href="#vision"></a></div>
                       <div id="home_bg" class="hidden-phone hidden-tablet" data-stellar-background-ratio="0.5" data-stellar-vertical-offset="0">
-                      </div>
-                  </div>
+                      </div>-->
+
               </div>
           </div>
-          
+
       </section>
       <!-- /HOME  -->
-      
-      
-      
-      
+
+
+
+
       <!-- NAVBAR  -->
       <div class="nav-container hidden-phone">
-          
-          
+
+
           <nav>
               <div id="logo_small"><a href="#home"><img src="img2/logo_temp.png" alt="Logo small" ></a></div>
               <ul>
-                  
+
                   <li><a href="#home" class="selected">Home</a></li>
                   <li><a href="#vision">Adventure</a></li>
                   <li><a href="#about">Services</a></li>
                   <li><a href="#contact">Connect</a></li>
-                  
-                  
+
+
               </ul>
           </nav>
-          
-          
+
+
       </div>
       <!-- /NAVBAR  -->
-      
+
       <!-- NAVBAR Mobile -->
       <div class="container nav-mobile hidden-tablet hidden-desktop">
-          
-          
-          
-          
+          <div id="logo_mobile"><a href="#home"><img style="margin: 0; height: 2.5em;" src="img2/logo_temp.png" alt="Logo small" ></a></div>
+
           <select class="dropmenu" name="dropmenu" onChange="$.scrollTo(this.value, 1500, {easing:'easeInOutExpo', axis:'y'})">
               <option value="" selected="selected">Menu</option>
               <option value="#home">Home</option>
@@ -94,237 +102,163 @@
               <option value="#about">Services</option>
               <option value="#contact">Connect</option>
           </select>
-          
-          
-          
+
+
+
       </div>
       <!-- /NAVBAR Mobile -->
-      
-      
-      
-      
+
       <!-- VISION  -->
       <section id="vision" >
-          
+
           <!-- Header -->
-          
+
           <div class="header" >
-          <div class="container visible-desktop" id="parallax_3"  data-stellar-ratio="0.9" data-stellar-vertical-offset="-500" ></div>
+
+          <!-- contains tvBG -->
+          <div class="container visible-desktop" id="parallax_3"  data-stellar-ratio="0.9" data-stellar-vertical-offset="-500" >
+            <div id="home_bg" class="hidden-phone hidden-tablet" >
+                      </div>
+
+          </div>
           <div class="container visible-tablet" id="parallax_3_mobile" ></div>
           <div class="container visible-desktop" id="parallax_4" data-stellar-ratio="0.8" data-stellar-vertical-offset="200"></div>
+
+
+
           <div class="container visible-tablet" id="parallax_4_mobile" ></div>
-          <div class="container visible-desktop" id="services_header" data-stellar-background-ratio="0.7" data-stellar-vertical-offset="0"><h1>Choose your adventure</h1></div>
-          <div class="container visible-tablet" id="services_header_mobile" ><h1>Vision</h1></div>
+          <div class="container visible-desktop" id="services_header" data-stellar-background-ratio="0.7" data-stellar-vertical-offset="0">
+            <h1>Choose your adventure.</h1>
           </div>
-          
+          <div class="container visible-tablet" id="services_header_mobile" >
+            <h1>Choose your adventure.</h1>
+          </div>
+          </div>
+
           <!-- /Header -->
-          
-          
+
+
           <!-- Content -->
           <div class="content">
               <div class="container">
-                  
+
                   <div class="row">
-                      
-                      
+
+
                       <div class="span12 centered">
-                          
+
                           <h1 >See it on TV. <br>See it in person tomorrow.</br></h1>
                 <!--          <hr>  -->
-                          
-                      </div>
-                      
-                      
-                      
-                      <!-- Feature List 
-                      <div class="span12 margin90 services_list">
-            
-                          <div class="row">
-                              
-                              <div class="span3">
-                                  <img src="img/digital_icon.jpg" alt="digital" >
-                              </div>
-                              
-                              <div class="span4 offset1 services_item">
-                                  <h4>We listen to your TV.</h4>
-                                  <p>Our tech magic can identify what shows your watching.</p>    
-                              </div>
-                              
-                              <div class="span4 services_item">
-                                  <h4>It's all about location.</h4>
-                                  <p>Discover your destination on TV while watching the shows your already love.</p>     
-                              </div>
-                          
-                          </div>
-                          
-                          
-                          <div class="row">
 
-                              <div class="span4 offset4">
-                                  <h4>Smart Itineraries.</h4>
-                                  <p>We help plan your trip and connect you with our partners to find the best deal.</p>
-                              </div>
-                              
-                              <div class="span4">
-                                  <h4>Recommendations.</h4>
-                                  <p>Gratuitous octopus niacin, sodium glutimate. Quote meon an estimate et non interruptus stadium.</p>
-                              </div>
-                          
-                          </div>
-                          
-                          <hr>
-                        
                       </div>
-                      <!-- /Feature List -->
-                      
-                      
-    <!--                  <!-- Service List 
-                      <div class="span12">
-                          <h2 class="centered">Our Services.</h2>
-                          <div class="row margin90" id="process">
-                              <div class="span4 centered">
-                                  <img src="img/process1.jpg" alt="img" >
-                                  <h3>1. Flights</h3>
-                                  <p>We connect with the best travel sites to get your there.</p>         
-                              </div>
-                              
-                              <div class="span4 centered">
-                                  <img src="img/process2.jpg" alt="img" >
-                                  <h3>2. Hotels</h3>
-                                  <p>And find a place to stay.</p>
-                              </div>
-                              
-                              <div class="span4 centered">
-                                  <img src="img/process3.jpg" alt="img" >
-                                  <h3>3. Cars</h3>
-                                  <p>And get around while your there.</p>
-                              </div>
-                              </div>
 
-                             <div class="row margin90" id="process">
-                              <div class="span4 centered">
-                                  <img src="img/process4.jpg" alt="img" >
-                                  <h3>4. Weather</h3>
-                                  <p>And recommendations to feel like your a local.</p>
-                              </div> 
 
-                              <div class="span4 centered">
-                                  <img src="img/process1.jpg" alt="img" >
-                                  <h3>5. Food</h3>
-                                  <p>We connect with the best travel sites to get your there.</p>         
-                              </div>
-                              
-                              <div class="span4 centered">
-                                  <img src="img/process2.jpg" alt="img" >
-                                  <h3>6. Drink</h3>
-                                  <p>And find a place to stay.</p>
-                              </div>
-                                                                                     
-                          </div>
-                          
-                      </div>
-                      <!-- /Services -->
-                  
-                  </div> 
-                  
+                  </div>
+
                </div><!-- /container -->
-              
+
           </div><!-- /content -->
-          
+
       </section>
       <!-- /VISION  -->
-      
-      
+
+
       <!-- ABOUT  -->
       <section id="about">
-          
+
           <!-- Header -->
           <div class="header" >
           <div class="container visible-desktop" id="parallax" data-stellar-ratio="1.1" data-stellar-vertical-offset="0"></div>
           <div class="container visible-tablet" id="parallax_mobile" ></div>
           <div class="container visible-desktop" id="parallax_2" data-stellar-ratio="0.8" data-stellar-vertical-offset="50"></div>
           <div class="container visible-tablet" id="parallax_2_mobile" ></div>
-          <div class="container visible-desktop" id="about_header" data-stellar-background-ratio="0.6" data-stellar-vertical-offset="0"><h1>We'll get you there</h1></div>
-          <div class="container visible-tablet" id="about_header_mobile" ><h1>ABOUT</h1></div>
+          <div class="container visible-desktop" id="about_header" data-stellar-background-ratio="0.6" data-stellar-vertical-offset="0">
+            <h1 style="text-align: center;">We'll get you there.</h1>
+          </div>
+          <div class="container visible-tablet" id="about_header_mobile" >
+            <h1 style="text-align: center;">We'll get you there.</h1>
+          </div>
           </div>
           <!-- /Header -->
-          
-            
-          
-          
+
+
+
+
           <!-- Content -->
           <div class="content">
-              
+
               <div class="container">
-                  
+
                   <div class="row">
-                      
+
                       <div class="span12">
                         <div class="row margin90" id="process">
                               <div class="span4 centered">
-                                  <img src="img/process1.jpg" alt="img" >
-                                  <h3>1. Your TV</h3>
-                                  <p>We identify that exotic locale on your screen.</p>         
+                                  <img src="icons/tv.png" alt="img" >
+                                  <h3>Your TV</h3>
+                                  <p>We identify that exotic locale on your screen.</p>
                               </div>
-                              
+
                               <div class="span4 centered">
-                                  <img src="img/process2.jpg" alt="img" >
-                                  <h3>2. Itinerary</h3>
+                                  <img src="icons/itin.png" alt="img" >
+                                  <h3>Itinerary</h3>
                                   <p>We'll show you itinerary choices.</p>
                               </div>
-                              
+
                               <div class="span4 centered">
-                                  <img src="img/process3.jpg" alt="img" >
-                                  <h3>3. Basic</h3>
+                                  <img src="icons/basic.png" alt="img" >
+                                  <h3>Basic</h3>
                                   <p>Including the best flights and lodging options.</p>
                               </div>
                               </div>
 
                              <div class="row margin90" id="process">
                               <div class="span4 centered">
-                                  <img src="img/process4.jpg" alt="img" >
-                                  <h3>4. Weather</h3>
+                                  <img src="icons/weather.png" alt="img" >
+                                  <h3>Weather</h3>
                                   <p>Give you and accurate weather report so you can pack the right things.</p>
-                              </div> 
+                              </div>
 
                               <div class="span4 centered">
-                                  <img src="img/process1.jpg" alt="img" >
-                                  <h3>5. Attractions</h3>
-                                  <p>Show you all the sights to see. Even the local's favorites</p>         
+                                  <img src="icons/sights.png" alt="img" >
+                                  <h3>Sights</h3>
+                                  <p>Show you all the sights to see. Even the local's favorites</p>
                               </div>
-                              
+
                               <div class="span4 centered">
-                                  <img src="img/process2.jpg" alt="img" >
-                                  <h3>6. Keep Watching</h3>
+                                  <img src="icons/view.png" alt="img" >
+                                  <h3>Viewing</h3>
                                   <p>No need to interrupt your show. Save all this and view it later.</p>
                               </div>
-                                                                                     
-                          </div>      
+
+                          </div>
                       </div>
-                      
+
                   </div>
-                  
+
               </div><!-- /container -->
           </div><!-- /content -->
-          
-          
+
+
       </section>
       <!-- /ABOUT  -->
-      
-      
+
+
       <div class="clear"></div>
-         
-      
+
+
       <!-- CONTACT  -->
-      
+
       <section id="start_project">
           <div class="container" >
               <div class="row">
                   <div class="span12 centered">
                       <h2>Let us fly you off the couch.</h2>
-                      
-                      <form id="emailList">
+
+                      <form action="thanks.html"onsubmit="return validateEmail()" method="post" id="emailList">
                         <label style="font-size: 1.5em; margin-right: 1em; color: #fff;" for="email">Your E-mail Please:</label><input class="textbox" type="email" id="email" name="email" />
+                        <span style="margin:0; text-align: center;" id="emailInfo"></span>
+                        <input class="enterButton" type="submit" value="Enter">
                       </form>
                       <ul class="list-social">
                           <li class="facebook"><a href="#"></a></li>
@@ -333,36 +267,37 @@
                           <li class="dribbble"><a href="#"></a></li>
                           <li class="rss"><a href="#"></a></li>
                       </ul>
-                      
+
                   </div>
-                  
+
               </div>
           </div>
       </section>
-      
+
       <!-- /CONTACT  -->
-      
-                
+
+
       <!-- FOOTER  -->
-      
+
       <section id="footer">
           <div class="container" >
               <div class="row">
                   <div class="span12 centered">
                       <p>© 2014 TVDuffle.</p>
-                      
+
                   </div>
-                  
+
               </div>
           </div>
       </section>
-      
+
       <!-- /FOOTER  -->
-      
+
   </body>
-    
-    
-    
+
+    <script src="js/emailVal.js"></script>
+    <script type="text/javascript" src="js/jquery1.5.0.min.js"></script>
+    <script src="js/carousel.js"></script>
     <script src="js/jquery-1.8.3.min.js"></script>
     <script src="js/jquery.easing.1.3.js"></script>
     <script src="js/bootstrap.js"></script>
@@ -376,8 +311,8 @@
     <script src="js/jquery.videoBG.js"></script>
     <script src="js/jquery.gmap.js"></script>
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    
-    
+
+
     <script type="text/javascript">
         $(function(){
           $.stellar({
@@ -388,17 +323,17 @@
                     hideDistantElements: true,
                     viewportDetectionInterval: 100
                     });
-          
+
           });
     </script>
-    
-        
+
+
     <script type="text/javascript">
         $(window).load(function() {
                        $('#portfolio1, #portfolio2, #portfolio3').flexslider({slideshow: false});
                        });
         </script>
-    
+
     <script type="text/javascript">
         $(document).ready(function(){
                           $("#map").gMap({ controls: false,

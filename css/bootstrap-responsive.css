@@ -131,14 +131,13 @@
   #about_header_mobile h1,
   #services_header_mobile h1,
   #works_header_mobile h1 {
-    font-size: 170px;
+    font-size: 5em;
     font-weight: 900;
-    letter-spacing: -8px;
+    /*letter-spacing: -8px;*/
     line-height: 115px;
     color:black;
-    text-transform:uppercase;
     margin-top:200px;
-    z-index: 3;
+    z-index: 20;
     position:relative;
   }
 
@@ -219,9 +218,9 @@
   }
   [class*="span"],
   .row-fluid [class*="span"] {
-    float: none;
+    float: left;
     display: block;
-    width: 100%;
+    width: 33%;
     margin-left: 0;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -271,14 +270,16 @@
   }  
   #home {min-height:400px;}
   #home h1{
-    font-size: 80px;
+    font-size: 3em;
     font-weight: 900;
-    letter-spacing: -3px;
-    line-height: 55px;
+    line-height: 1.3em;
+    margin: 30% auto 30% auto;
   }
   #logo {margin: 30px 0px;}
   
-  #about h3 {margin-top:30px;} 
+  #about h3 {
+    /*margin-top:30px;*/
+    } 
   #services h4 {margin-top:30px;}  
   .services_item {margin-bottom:0px;}
   .flexslider .slides iframe { height: auto;} 
@@ -304,9 +305,21 @@
     top:0px;
     z-index: 200;
     margin:0px auto;
-    padding-top:10px;   
+    padding-top:10px;
+    padding-bottom: 5px;   
   }
-  .dropmenu {width:200px;}
+  .dropmenu {
+    width: 7em;
+    float: right;
+    margin-right: 8%;
+  }
+
+  #logo_mobile{
+    height: 50%;
+    width: 30%;
+    margin: 0;
+    float: left;
+  }
 
   #start_project h2 {    
     margin-top:20px;

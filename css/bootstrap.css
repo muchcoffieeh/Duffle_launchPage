@@ -149,7 +149,7 @@ body {
   color: #555555;
   background-color: #ffffff;
   font-weight: 400;
-  
+
 }
 a {
   color: #2f84cc;
@@ -182,6 +182,14 @@ a:hover {
   margin-left: -20px;
   *zoom: 1;
 }
+
+.rowTop {
+  width: 100%;
+  *zoom: 1;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+}
 .row:before,
 .row:after {
   display: table;
@@ -196,6 +204,11 @@ a:hover {
   min-height: 1px;
   margin-left: 20px;
 }
+
+.containerTop{
+  width: 100%;
+}
+
 .container,
 .navbar-static-top .container,
 .navbar-fixed-top .container,
@@ -454,7 +467,7 @@ a:hover {
   float: right;
 }
 .container {
-  margin-right: auto;
+ margin-right: auto;
   margin-left: auto;
   *zoom: 1;
 }
@@ -481,6 +494,33 @@ a:hover {
 .container-fluid:after {
   clear: both;
 }
+/* container top*/
+.containerTop:before,
+.containerTop:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.containerTop:after {
+  clear: both;
+}
+.containerTop-fluid {
+  padding-right: 20px;
+  padding-left: 20px;
+  *zoom: 1;
+}
+.containerTop-fluid:before,
+.containerTop-fluid:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.containerTop-fluid:after {
+  clear: both;
+}
+/* container top*/
+
+
 p {
   margin: 0 0 13.5px;
 }
@@ -525,7 +565,7 @@ h5,
 h6 {
   margin: 0;
   font-family: inherit;
-  
+
   line-height: 1;
   color: inherit;
   text-rendering: optimizelegibility;
@@ -541,10 +581,9 @@ h6 small {
   color: #999999;
 }
 h1 {
-  font-size: 60px;
-  line-height: 80px;
+  font-size: 2em;
+  line-height: 1.3em;
   font-weight: 900;
-  letter-spacing:-2px:
 }
 h2 {
 
@@ -557,11 +596,11 @@ h2 {
 
 }
 h3 {
-  font-size: 30px;
-  line-height: 40px;
+  font-size: 1.5em;
+  line-height: 1em;
   font-weight: 600;
   color:black;
-  
+
 }
 h4 {
   font-weight: 200;
@@ -570,7 +609,7 @@ h4 {
   margin-bottom:20px;
 }
 h5 {
-  
+
   font-weight: normal;
   font-size: 14px;
   line-height: 27px;
@@ -657,7 +696,7 @@ hr {
   margin:45px 0;
   border: 0;
   border-top: 1px solid #dcdcdc;
-  
+
 }
 abbr[title] {
   cursor: help;
