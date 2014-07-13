@@ -123,13 +123,21 @@ nav li a.selected {
 #home_bg {
     /*background: url(../img2/beachBoat.jpg) no-repeat center center;
     background-color:#0099e5; */
-    width:50%;
-    height:80%;
-    margin: 7.9% auto 10% 20.4%;
+    width:100%;
+    height: 100%;
     position:absolute;
     z-index:2;
     top:0px;
-    left:0px;
+
+}
+
+.videoBG{
+    margin: 7em auto 0 auto;
+    width: 50em;
+}
+
+#video{
+    width: 1000px;
 }
 
 #home img{
@@ -148,35 +156,14 @@ nav li a.selected {
     z-index: 3;
     position:relative;
 }
-/*
-#carousel {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: 1;
-  }
-
-  #carousel ul {
-    width:  100%;
-    padding:0;
-    margin:0;
-  }
-
-  #carousel ul li {
-    width:100%;
-    text-align:   center;
-    height: 100%;
-    list-style:   none;
-    float:  left;
-  } */
 
   #carousel_inner {
 float:left; /* important for inline positioning */
-width:98.2%; /* important (this width = width of list item(including margin) * items shown */
+width:100%; /* important (this width = width of list item(including margin) * items shown */
 overflow: hidden;  /* important (hide the items outside the div) */
 /* non-important styling bellow */
-background: #F0F0F0;
-height: 50em;
+background: #fff;
+/*height: 50em;*/
 z-index:0;
 }
 
@@ -184,8 +171,8 @@ z-index:0;
 position:relative;
 /*left:-210px; /* important (this should be negative number of list items width(including margin) */
 list-style-type: none; /* removing the default styling for unordered list items */
-margin-right: 2%;
-margin-left: 2%;
+/*margin-right: 2%;
+margin-left: 2%;*/
 padding: 0px;
 width:9999px; /* important */
 /* non-important styling bellow */
@@ -197,7 +184,7 @@ float: left; /* important for inline positioning of the list items */
   /* fixed width, important */
 /* just styling bellow*/
 padding:0px;
-height:60em;
+/*height:60em;*/
 background: #000000;
 }
 
@@ -205,19 +192,28 @@ background: #000000;
 .margin-bottom:-4px; /* IE is making a 4px gap bellow an image inside of an anchor (<a href...>) so this is to fix that*/
 /* styling */
 cursor:pointer;
-
 border:0px;
+
 }
 #left_scroll, #right_scroll{
-float:left;
-width:15px;
-background: #C0C0C0;
-z-index: 10;
+    display: inline-block;
+    width:15px;
+    background: #C0C0C0;
+    z-index: 10;
 }
+
+#left_scroll{
+    float: left;
+}
+
+#right_scroll{
+    float: right;
+}
+
 #left_scroll img, #right_scroll img{
 /*styling*/
 cursor: pointer;
-height: 35em;
+height: 50em;
 }
 
 #arrow {
@@ -299,7 +295,7 @@ img#logo {
     background: url(../img2/tvBG.jpg) no-repeat center  top;
     display:block;
     width:100%;
-    height:600px;
+    height: 100%;
     position:absolute;
     z-index: 2;
     margin-top: 10em;
@@ -309,7 +305,7 @@ img#logo {
     background: url(../img2/couple.png) no-repeat center top;
     display:block;
     width:100%;
-    height:100%;
+    height:120%;
     position:absolute;
     z-index: 4;
 }
@@ -323,6 +319,7 @@ img#logo {
     z-index: 1;
 }
 
+/*
 #parallax_6 {
     background: url(../img/works_bg3.png) no-repeat center top  ;
     width:100%;
@@ -330,7 +327,7 @@ img#logo {
     position:absolute;
     display:block;
     z-index: 10;
-}
+}*/
 
 
 
@@ -377,6 +374,7 @@ img#logo {
     z-index: 5;
 }
 
+/*
 #parallax_5_mobile {
     background: url(../img/works_bg2.png) no-repeat center bottom  ;
 
@@ -395,7 +393,7 @@ img#logo {
     position:absolute;
     display:block;
     z-index: 10;
-}
+}*/
 
 
 

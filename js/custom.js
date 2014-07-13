@@ -20,6 +20,7 @@ rScroll.css("height",windowHeight+"px");
 var lScroll = $("#left_scroll");
 lScroll.css("height",windowHeight+"px");
 
+
 var intro=$("#intro");
 intro.css("margin-top",introHeight+"px");
 
@@ -38,7 +39,7 @@ sniffer();
 //this function is used display the vidoe on the homepage
 function video() {
 
-var videoHeight=$(window).height();
+//var videoHeight=$(window).height();
 
 $('#home_bg').videoBG({
                     mp4:'video/japan.mp4',
