@@ -50,26 +50,17 @@
               </ul>
             </div>
            </div>
-
           </div>
+
           <div class="rowTop">
-            <div class="hidden-phone" id='left_scroll'><img src='icons/left.png' /></div>
-            <div class="hidden-phone"  id='right_scroll'><img src='icons/right.png' /></div>
-              <div>
-                      <!--
-                      <div id="logo" ><img style="height: 10em;" src="img2/logo_temp.png" alt="Logo" ></div>-->
-
-                   <!--   <div id="head" class="hidden-phone"></div>-->
-
-                      <h1>Travel.<br> Right from the TV.</br><br>Coming Soon.</br></h1>
-
-                     <!-- <div id="arrow" class="hidden-phone"><a href="#vision"></a></div>
-                      <div id="home_bg" class="hidden-phone hidden-tablet" data-stellar-background-ratio="0.5" data-stellar-vertical-offset="0">
-                      </div>-->
-
+            <div class="hidden-phone" id='left_scroll'><img src='icons/left.png' />
+            </div>
+            <div class="hidden-phone"  id='right_scroll'><img src='icons/right.png' />
+            </div>
+              <div class="head" data-stellar-background-ratio="0.7" data-stellar-vertical-offset="0">
+                <h1>Travel.<br> Right from the TV.</br><br>Coming Soon.</br></h1>
               </div>
-
-
+          </div>
         </div>
 
       </section>
@@ -106,7 +97,7 @@
           <select class="dropmenu" name="dropmenu" onChange="$.scrollTo(this.value, 1500, {easing:'easeInOutExpo', axis:'y'})">
               <option value="" selected="selected">Menu</option>
               <option value="#home">Home</option>
-              <option value="#vision">Adventure</option>
+           <!--   <option value="#vision">Adventure</option>-->
               <option value="#about">Services</option>
               <option value="#contact">Connect</option>
           </select>
@@ -121,7 +112,7 @@
 
           <!-- Header -->
 
-          <div class="header" >
+          <div class="header" style="z-index: 20;">
 
           <!-- contains tvBG -->
           <div class="container visible-desktop" id="parallax_3"  data-stellar-ratio="0.9" data-stellar-vertical-offset="-500" >
@@ -178,7 +169,7 @@
       <section id="about">
 
           <!-- Header -->
-          <div class="header" >
+          <div class="header" style="z-index: 22;">
           <div class="container visible-desktop" id="parallax" data-stellar-ratio="1.1" data-stellar-vertical-offset="0"></div>
           <div class="container visible-tablet" id="parallax_mobile" ></div>
           <div class="container visible-desktop" id="parallax_2" data-stellar-ratio="0.8" data-stellar-vertical-offset="50"></div>
@@ -262,7 +253,7 @@
 
       <section id="start_project">
           <div class="container" >
-              <div style="margin: 10% 2em 0 2em;" class="row">
+              <div style="margin:8% 2em  20% 2em;" class="row">
                 <div class="hidden-phone">
                   <div class="span12 centered">
                       <h2>Let us fly you off the couch.</h2>
@@ -288,12 +279,12 @@
 
                       <form action="thanks.html" onsubmit="return validateEmail()" method="post" id="emailList">
 
-                        <label style="font-size: 1.5em; margin-right: 1em; color: #fff;" for="email">Your E-mail Please:</label><input style="margin: 0.5em 0 0.5em 0" class="textbox" type="email" id="email" name="email" />
+                        <label style="font-size: 1.5em; margin-right: 1em; color: #fff;" for="email">Your E-mail Please:</label><input style="margin: 0.5em 0 0.5em 0; width: 17em;" class="textbox" type="email" id="email" name="email" />
                         <span style="color: #fff" style="margin:0; text-align: center;" id="emailInfo"></span>
                         <input class="enterButton" type="submit" value="Enter">
                       </form>
 
-                      <ul class="list-social">
+                      <ul style="margin-bottom: 10em;"class="list-social">
                           <li class="facebook"><a href="https://www.facebook.com/TVDuffle"></a></li>
                           <li class="twitter"><a href="https://twitter.com/TVDuffle"></a></li>
                       </ul>
@@ -337,7 +328,7 @@
     <script src="js/navbar.js"></script>
     <script src="js/custom.js"></script>
     <script src="js/jquery.stellar.js"></script>
-    <script src="js/jquery.flexslider.js"></script>
+ <!--   <script src="js/jquery.flexslider.js"></script> -->
     <script src="js/jquery.fancybox-1.3.4.pack.js"></script>
     <script src="js/jquery.videoBG.js"></script>
     <script src="js/jquery.gmap.js"></script>

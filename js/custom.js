@@ -1,4 +1,6 @@
 $(document).ready(function(){
+  myVid=document.getElementById("video");
+myVid.muted=true;
 
 //this function is used to position elements on the homepage
 function sniffer() {

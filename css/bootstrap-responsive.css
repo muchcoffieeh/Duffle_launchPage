@@ -124,8 +124,8 @@
 
   #head {
   width:700px;
- 
-     
+
+
   }
 
   #about_header_mobile h1,
@@ -179,8 +179,10 @@
     display: none !important;
   }
   body {text-align:center;
+    /*
     padding-left: 20px;
     padding-right: 20px;
+    */
     font-size: 15px;
     line-height: 22px;
   }
@@ -267,46 +269,47 @@
   }
   .modal.fade.in {
     top: auto;
-  }  
-  #home {min-height:400px;}
+  }
+  #home {min-height:600px;}
   #home h1{
+    padding: 0 0.5em 0 0.5em;
     font-size: 3em;
     font-weight: 900;
     line-height: 1.3em;
     margin: 30% auto 30% auto;
   }
   #logo {margin: 30px 0px;}
-  
+
   #about h3 {
     /*margin-top:30px;*/
-    } 
-  #services h4 {margin-top:30px;}  
+    }
+  #services h4 {margin-top:30px;}
   .services_item {margin-bottom:0px;}
-  .flexslider .slides iframe { height: auto;} 
+  .flexslider .slides iframe { height: auto;}
   .list-social li {
     margin-top:5px;
     margin-bottom:5px;
   }
-  #start_project p { 
+  #start_project p {
     margin-bottom:20px;
   }
-  
+
 
   #map {
-    height:200px; 
-  } 
+    height:200px;
+  }
 
   .nav-mobile {
     text-align:center;
     background-color:black;
     height:40px;
-    width:200px; 
-    position: fixed; 
+    width:100%;
+    position: fixed;
     top:0px;
     z-index: 200;
     margin:0px auto;
     padding-top:10px;
-    padding-bottom: 5px;   
+    padding-bottom: 5px;
   }
   .dropmenu {
     width: 7em;
@@ -316,12 +319,11 @@
 
   #logo_mobile{
     height: 50%;
-    width: 30%;
     margin: 0;
     float: left;
   }
 
-  #start_project h2 {    
+  #start_project h2 {
     margin-top:20px;
     margin-bottom:0px;
   }
@@ -329,7 +331,7 @@
   #start_project h1 {
     font-size: 30px;
     margin-top:0px;
-    margin-bottom:10px;    
+    margin-bottom:10px;
   }
 
   #footer p {

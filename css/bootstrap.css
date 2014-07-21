@@ -522,7 +522,7 @@ a:hover {
 
 
 p {
-  margin: 0 0 13.5px;
+  margin: 0 0.2em 0 0.2em;
 }
 .lead {
   margin-bottom: 27px;
@@ -596,7 +596,7 @@ h2 {
 
 }
 h3 {
-  font-size: 1.5em;
+  font-size: 1.2em;
   line-height: 1em;
   font-weight: 600;
   color:black;
